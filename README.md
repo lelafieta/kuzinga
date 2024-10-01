@@ -11,5 +11,3 @@ Application is build with Clean Architecture of Robert C. Martin (Uncle Bob)
 Login Authentication UI
 ...
 
-
-https://github.com/user-attachments/assets/ba7878b5-8363-4dad-b308-9ef0b4ca1bfe
