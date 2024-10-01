@@ -11,6 +11,11 @@ Application is build with Clean Architecture of Robert C. Martin (Uncle Bob)
 Login Authentication UI
 ...
 
+<img src="https://github.com/user-attachments/assets/5523c24e-daf0-4b92-89f7-871e98cda9b0" width="300" />
+<img src="https://github.com/user-attachments/assets/a7371539-f704-4aad-a0f8-ad08067c9537" width="300" />
+<img src="https://github.com/user-attachments/assets/1ad210f0-8cbe-4844-9a7c-6bcce89a74c0" width="300" />
+
+
 - ![Screenshot_1727772470](https://github.com/user-attachments/assets/5523c24e-daf0-4b92-89f7-871e98cda9b0) ![Screenshot_1727773522](https://github.com/user-attachments/assets/a7371539-f704-4aad-a0f8-ad08067c9537) ![Screenshot_1727773522](https://github.com/user-attachments/assets/a7371539-f704-4aad-a0f8-ad08067c9537)
 - ![Screenshot_1727773522](https://github.com/user-attachments/assets/a7371539-f704-4aad-a0f8-ad08067c9537)
 - ![Screenshot_1727773513](https://github.com/user-attachments/assets/1ad210f0-8cbe-4844-9a7c-6bcce89a74c0)
