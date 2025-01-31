@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "391579409427",
+    "project_id": "kuzinga-e741c",
+    "storage_bucket": "kuzinga-e741c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391579409427:android:4abaf05e6d614aee7933e6",
+        "android_client_info": {
+          "package_name": "com.kuzinga.app.kuzinga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2SpPm2Ye0WZJcPBX0SIBQLW4luhmoWDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

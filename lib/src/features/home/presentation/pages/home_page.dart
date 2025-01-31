@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SafeArea(
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: AppValues.s80,
                             //color: Colors.green,
@@ -510,6 +510,7 @@ class _HomePageState extends State<HomePage> {
                             child: GridView.builder(
                               shrinkWrap: true,
                               physics: const ClampingScrollPhysics(),
+                              padding: const EdgeInsets.symmetric(vertical: 16),
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 2,
