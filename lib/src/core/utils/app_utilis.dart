@@ -1,5 +1,4 @@
 import 'package:fluttertoast/fluttertoast.dart';
-
 import '../../configs/themes/color_palette.dart';
 
 class AppUtilis {
