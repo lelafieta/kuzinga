@@ -2,7 +2,7 @@ class AppRoutes {
   static const String rootRoute = "/";
   static const String loginRoute = "/login";
   static const String introductionRoute = "/introduction";
-  static const String kuslaRoute = "/kusala";
+  static const String kizingaRoute = "/kizingaRoute";
   static const String chatRoute = "/chat";
   static const String messageRoute = "/message";
   static const String calendarRoute = "/calendar";
@@ -16,4 +16,5 @@ class AppRoutes {
   static const String notificationRoute = "/notifications";
   static const String profileRoute = "/profile";
   static const String userOptionsRoute = "/userOptions";
+  static const String adminRoute = "/admin";
 }

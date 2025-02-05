@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 import 'package:kuzinga/src/features/auth/presentation/cubit/auth/auth_cubit.dart';
 import 'package:toastification/toastification.dart';
 
@@ -17,7 +18,7 @@ class KuzingaApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => di.instance<AuthCubit>()),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.lightTheme,
         debugShowCheckedModeBanner: false,

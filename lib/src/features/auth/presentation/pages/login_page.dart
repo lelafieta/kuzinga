@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:get/get.dart';
 
 import '../../../../configs/routes/routes.dart';
 import '../../../../configs/themes/color_palette.dart';
@@ -38,7 +39,14 @@ class _LoginPageState extends State<LoginPage> {
               if (state is Authenticating) {
                 EasyLoading.show(status: "Autenticando...");
               } else if (state is UnAuthenticated) {
-                AppUtils.toastError("Error");
+                EasyLoading.dismiss();
+                AppUtils.toastError("Credenciais erradas");
+              } else if (state is AuthFailure) {
+                EasyLoading.dismiss();
+                AppUtils.toastError("Erro de internet");
+              } else if (state is Authenticated) {
+                EasyLoading.dismiss();
+                Get.toNamed(AppRoutes.adminRoute);
               }
             },
             builder: (context, state) {

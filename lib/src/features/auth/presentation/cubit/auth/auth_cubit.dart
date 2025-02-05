@@ -19,8 +19,8 @@ class AuthCubit extends Cubit<AuthState> {
       await loginUseCase.call(email, password);
       emit(Authenticated());
     } on SocketException catch (_) {
-      emit(UnAuthenticated());
-    } catch (_) {
+      emit(AuthFailure());
+    } catch (e) {
       emit(UnAuthenticated());
     }
   }

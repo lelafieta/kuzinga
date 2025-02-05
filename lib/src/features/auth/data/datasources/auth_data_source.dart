@@ -30,11 +30,11 @@ class AuthDataSource extends IAuthDataSource {
           email: email, password: password);
     } on FirebaseAuthException catch (e) {
       if (e.code == "invalid-credential") {
-        AppUtils.toastError("Credenciais inválidas");
+        throw Exception("Credenciais inválidas");
       } else if (e.code == "user-not-found") {
-        AppUtils.toastError("Utilizador não encontrado");
+        throw Exception("Utilizador não encontrado");
       } else if (e.code == "wrong-password") {
-        AppUtils.toastError("E-mail ou password inválido");
+        throw Exception("E-mail ou password inválido");
       }
     }
   }

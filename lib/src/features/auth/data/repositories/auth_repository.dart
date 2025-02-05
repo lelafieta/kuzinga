@@ -17,7 +17,7 @@ class AuthRepository extends IAuthRepository {
     try {
       await authDataSource.login(email, password);
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 

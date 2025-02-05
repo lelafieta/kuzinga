@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuzinga/src/features/admin/presentation/pages/admin_page.dart';
 import 'package:kuzinga/src/features/attendance/presentation/pages/attendance_page.dart';
 import 'package:kuzinga/src/features/calendar/presentation/pages/calendar_page.dart';
 import 'package:kuzinga/src/features/exames/pages/exame_page.dart';
@@ -34,7 +35,7 @@ class RouteManager {
         return MaterialPageRoute(
           builder: (context) => const LoginPage(),
         );
-      case AppRoutes.kuslaRoute:
+      case AppRoutes.kizingaRoute:
         return MaterialPageRoute(
           builder: (context) => const KuzingaPage(),
         );
@@ -88,6 +89,11 @@ class RouteManager {
       case AppRoutes.userOptionsRoute:
         return MaterialPageRoute(
           builder: (context) => const UserOptionsPage(),
+        );
+
+      case AppRoutes.adminRoute:
+        return MaterialPageRoute(
+          builder: (context) => const AdminPage(),
         );
 
       default:
