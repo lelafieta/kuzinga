@@ -44,4 +44,13 @@ class AppIcons {
   static const String exit = "assets/icons/exit.svg";
   static const String clipboardUser = "assets/icons/clipboard-user.svg";
   static const String expense = "assets/icons/expense.svg";
+
+  static const String chartSimpleHorizontal =
+      "assets/icons/chart-simple-horizontal.svg";
+  static const String commentAltDots = "assets/icons/comment-alt-dots.svg";
+  static const String walletArrow = "assets/icons/wallet-arrow.svg";
+  static const String userTrust = "assets/icons/user-trust.svg";
+  static const String userKey = "assets/icons/user-key.svg";
+  static const String admin = "assets/icons/admin.svg";
+  static const String school = "assets/icons/school.svg";
 }

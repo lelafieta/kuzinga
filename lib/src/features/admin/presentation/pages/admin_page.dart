@@ -16,13 +16,37 @@ class AdminPage extends StatefulWidget {
 }
 
 class _AdminPageState extends State<AdminPage> {
-  final List<String> items = [
-    "Instituições",
-    "Administradores",
-    "Papeis",
-    "Pacotes",
-    "Broadcast & Notificações",
-    "Gráficos",
+  final List<Menu> items = [
+    Menu(
+      title: "Gestão de Instituições",
+      subtitle: "subtitle",
+      icon: AppIcons.school,
+    ),
+    Menu(
+      title: "Gestão de Administradores",
+      subtitle: "subtitle",
+      icon: AppIcons.userKey,
+    ),
+    Menu(
+      title: "Gestão de Papeis",
+      subtitle: "subtitle",
+      icon: AppIcons.userTrust,
+    ),
+    Menu(
+      title: "Gestão de Pacotes",
+      subtitle: "subtitle",
+      icon: AppIcons.walletArrow,
+    ),
+    Menu(
+      title: "Broadcast & Notificações",
+      subtitle: "subtitle",
+      icon: AppIcons.commentAltDots,
+    ),
+    Menu(
+      title: "Estatística",
+      subtitle: "subtitle",
+      icon: AppIcons.chartSimpleHorizontal,
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -107,7 +131,7 @@ class _AdminPageState extends State<AdminPage> {
           ),
           Expanded(
             child: GridView.builder(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, // 2 colunas
                 crossAxisSpacing: AppValues.s18,
@@ -116,7 +140,9 @@ class _AdminPageState extends State<AdminPage> {
               ),
               itemCount: items.length,
               itemBuilder: (context, index) {
+                final menu = items.elementAt(index);
                 return Container(
+                  padding: const EdgeInsets.all(AppValues.s16),
                   decoration: BoxDecoration(
                     // color: Colors.blueAccent,
                     borderRadius: BorderRadius.circular(AppValues.s10),
@@ -131,7 +157,7 @@ class _AdminPageState extends State<AdminPage> {
                     children: [
                       Center(
                         child: SvgPicture.asset(
-                          AppIcons.apple,
+                          menu.icon,
                           width: AppValues.s28,
                           color: AppColors.primaryColor,
                         ),
@@ -141,22 +167,15 @@ class _AdminPageState extends State<AdminPage> {
                       ),
                       Center(
                         child: Text(
-                          "Gestão",
+                          menu.title,
                           style:
                               Theme.of(context).textTheme.bodyMedium!.copyWith(
                                     color: AppColors.secondColor,
                                     fontWeight: FontWeight.w600,
                                   ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
-                      Center(
-                          child: Text(
-                        "de Instituições",
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: AppColors.secondColor,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      )),
                     ],
                   ),
                 );
@@ -167,4 +186,16 @@ class _AdminPageState extends State<AdminPage> {
       ),
     );
   }
+}
+
+class Menu {
+  final String title;
+  final String subtitle;
+  final String icon;
+
+  Menu({
+    required this.title,
+    required this.subtitle,
+    required this.icon,
+  });
 }
