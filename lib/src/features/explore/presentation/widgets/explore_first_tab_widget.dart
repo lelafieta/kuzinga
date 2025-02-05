@@ -6,7 +6,7 @@ import 'package:kuzinga/src/core/resources/images/app_images.dart';
 
 import '../../../../configs/themes/color_palette.dart';
 import '../../../../core/utils/app_values.dart';
-import '../../../auth/login/data/datas.dart';
+import '../../../auth/data/datas.dart';
 
 class ExploreFirstTabWidget extends StatelessWidget {
   const ExploreFirstTabWidget({super.key});

@@ -12,7 +12,7 @@ import 'package:kuzinga/src/features/profile/presentation/profile_page.dart';
 import 'package:kuzinga/src/features/splash/presentation/pages/splash_page.dart';
 import 'package:kuzinga/src/features/timetable/pages/timetable_page.dart';
 
-import '../../features/auth/login/presentation/pages/login_page.dart';
+import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/introduction/presentation/pages/introduction_page.dart';
 import '../../features/kuzinga/presentation/pages/kuzinga_page.dart';
 import '../../features/timetable/pages/timetable_table_page.dart';

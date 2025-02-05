@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../configs/themes/color_palette.dart';
 import '../../../core/resources/icons/app_icons.dart';
 import '../../../core/utils/app_values.dart';
-import '../../auth/login/data/datas.dart';
+import '../../auth/data/datas.dart';
 
 class ExameTabSecondWidget extends StatelessWidget {
   const ExameTabSecondWidget({super.key});

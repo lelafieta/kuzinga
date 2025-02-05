@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kuzinga/src/core/resources/icons/app_icons.dart';
 import 'package:kuzinga/src/core/utils/app_values.dart';
-import 'package:kuzinga/src/features/auth/login/data/datas.dart';
+import 'package:kuzinga/src/features/auth/data/datas.dart';
 
 import '../../../../configs/themes/color_palette.dart';
 

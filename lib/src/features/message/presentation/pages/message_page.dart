@@ -9,7 +9,7 @@ import '../../../../configs/themes/color_palette.dart';
 import '../../../../core/resources/icons/app_icons.dart';
 import '../../../../core/strings/app_strings.dart';
 import '../../../../core/utils/app_values.dart';
-import '../../../auth/login/data/datas.dart';
+import '../../../auth/data/datas.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});

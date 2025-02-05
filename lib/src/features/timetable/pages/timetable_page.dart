@@ -12,7 +12,7 @@ import 'package:kuzinga/src/core/utils/app_values.dart';
 import 'package:mobkit_calendar/mobkit_calendar.dart';
 
 import '../../../configs/themes/color_palette.dart';
-import '../../auth/login/data/datas.dart';
+import '../../auth/data/datas.dart';
 import '../widgets/timetable_tab_first_widget.dart';
 import '../widgets/timetable_tab_second_widget.dart';
 import '../widgets/timetable_tab_third_widget.dart';

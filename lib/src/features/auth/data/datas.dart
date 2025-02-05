@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/resources/images/app_images.dart';
+import '../../../core/resources/images/app_images.dart';
 
 class UserProfile {
   final int id;

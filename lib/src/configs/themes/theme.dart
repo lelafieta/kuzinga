@@ -71,21 +71,21 @@ class AppTheme {
               color: AppColors.strokeColor,
               width: AppValues.s1,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(AppValues.s10)),
+            borderRadius: BorderRadius.all(Radius.circular(AppValues.s50)),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: AppColors.primaryColor,
               width: AppValues.s1,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(AppValues.s10)),
+            borderRadius: BorderRadius.all(Radius.circular(AppValues.s50)),
           ),
           errorBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: AppColors.error,
               width: AppValues.s1,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(AppValues.s10)),
+            borderRadius: BorderRadius.all(Radius.circular(AppValues.s50)),
             //borderRadius: BorderRadius.circular(10),
           ),
           focusedErrorBorder: OutlineInputBorder(

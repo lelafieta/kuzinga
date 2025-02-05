@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 
 import 'package:flutter/material.dart';
-import 'package:kuzinga/src/features/auth/login/data/datas.dart';
+import 'package:kuzinga/src/features/auth/data/datas.dart';
 
 import 'package:table_calendar/table_calendar.dart';
 

@@ -43,4 +43,5 @@ class AppIcons {
   static const String speach = "assets/icons/chat.svg";
   static const String exit = "assets/icons/exit.svg";
   static const String clipboardUser = "assets/icons/clipboard-user.svg";
+  static const String expense = "assets/icons/expense.svg";
 }

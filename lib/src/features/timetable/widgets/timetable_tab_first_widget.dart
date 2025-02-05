@@ -6,7 +6,7 @@ import 'package:kuzinga/src/core/resources/icons/app_icons.dart';
 import '../../../configs/themes/color_palette.dart';
 import '../../../core/resources/images/app_images.dart';
 import '../../../core/utils/app_values.dart';
-import '../../auth/login/data/datas.dart';
+import '../../auth/data/datas.dart';
 
 class TimetableTabFirstWidget extends StatelessWidget {
   const TimetableTabFirstWidget({super.key});

@@ -1,7 +1,7 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import '../../configs/themes/color_palette.dart';
 
-class AppUtilis {
+class AppUtils {
   static void toastSuccess(String message) {
     Fluttertoast.showToast(
         msg: message,

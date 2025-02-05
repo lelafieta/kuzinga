@@ -49,6 +49,7 @@ class AppStrings {
   static const String attendance = "Presenças";
   static const String exams = "Exames";
   static const String bus = "Autocarro";
+  static const String payment = "Pagamento";
   static const String library = "Biblioteca";
   static const String todaysClass = "Aulas de Hoje";
 

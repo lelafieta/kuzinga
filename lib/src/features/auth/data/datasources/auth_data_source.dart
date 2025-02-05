@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:kuzinga/src/core/cache/secure_storage.dart';
 import 'package:kuzinga/src/core/utils/app_utilis.dart';
 import 'package:kuzinga/src/features/auth/data/datasources/i_auth_data_source.dart';
 import 'package:kuzinga/src/features/auth/domain/entities/user_entity.dart';
@@ -9,11 +10,13 @@ class AuthDataSource extends IAuthDataSource {
   final FirebaseFirestore firebaseFirestore;
   final FirebaseAuth firebaseAuth;
   final FirebaseStorage firebaseStorage;
+  final SecureCacheHelper secureCacheHelper;
 
   AuthDataSource(
       {required this.firebaseFirestore,
       required this.firebaseAuth,
-      required this.firebaseStorage});
+      required this.firebaseStorage,
+      required this.secureCacheHelper});
 
   @override
   Future<UserEntity?> getCurrentUser() {
@@ -26,10 +29,12 @@ class AuthDataSource extends IAuthDataSource {
       await firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
     } on FirebaseAuthException catch (e) {
-      if (e.code == "user-not-found") {
-        AppUtilis.toastError("user not found");
+      if (e.code == "invalid-credential") {
+        AppUtils.toastError("Credenciais inválidas");
+      } else if (e.code == "user-not-found") {
+        AppUtils.toastError("Utilizador não encontrado");
       } else if (e.code == "wrong-password") {
-        AppUtilis.toastError("Invalid email or password");
+        AppUtils.toastError("E-mail ou password inválido");
       }
     }
   }

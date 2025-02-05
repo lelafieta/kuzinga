@@ -10,7 +10,7 @@ import 'package:kuzinga/src/core/strings/app_strings.dart';
 import 'package:kuzinga/src/core/utils/app_values.dart';
 
 import '../../../../configs/themes/color_palette.dart';
-import '../../../auth/login/data/datas.dart';
+import '../../../auth/data/datas.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                         boxShadow: [
                           BoxShadow(
                             spreadRadius: .10,
-                            offset: Offset(1, 1),
+                            offset: const Offset(1, 1),
                             blurRadius: 5,
                             color: AppColors.blackColor.withOpacity(.1),
                           ),
@@ -305,7 +305,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   child: Center(
                                     child: SvgPicture.asset(
-                                      AppIcons.bus,
+                                      AppIcons.expense,
                                       color: AppColors.secondColor,
                                     ),
                                   ),
@@ -314,7 +314,7 @@ class _HomePageState extends State<HomePage> {
                                   height: AppValues.s5,
                                 ),
                                 const Text(
-                                  AppStrings.bus,
+                                  AppStrings.payment,
                                   style: TextStyle(color: Colors.black87),
                                 ),
                               ],
