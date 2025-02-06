@@ -5,6 +5,7 @@ import 'package:kuzinga/src/features/calendar/presentation/pages/calendar_page.d
 import 'package:kuzinga/src/features/exames/pages/exame_page.dart';
 import 'package:kuzinga/src/features/explore/presentation/pages/explore_page.dart';
 import 'package:kuzinga/src/features/home/presentation/pages/user_options_page.dart';
+import 'package:kuzinga/src/features/institutions/presentation/pages/institution_page.dart';
 import 'package:kuzinga/src/features/lessons/pages/lesson_page.dart';
 import 'package:kuzinga/src/features/library/pages/library_page.dart';
 import 'package:kuzinga/src/features/message/presentation/pages/chat_page.dart';
@@ -94,6 +95,11 @@ class RouteManager {
       case AppRoutes.adminRoute:
         return MaterialPageRoute(
           builder: (context) => const AdminPage(),
+        );
+
+      case AppRoutes.instituitionRoute:
+        return MaterialPageRoute(
+          builder: (context) => const InstitutionPage(),
         );
 
       default:

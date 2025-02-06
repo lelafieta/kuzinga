@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:kuzinga/src/configs/routes/routes.dart';
 import 'package:kuzinga/src/core/utils/app_values.dart';
 
 import '../../../../configs/themes/color_palette.dart';
@@ -21,33 +23,54 @@ class _AdminPageState extends State<AdminPage> {
       title: "Gestão de Instituições",
       subtitle: "subtitle",
       icon: AppIcons.school,
+      iconColor: const Color(0xFF1565C0),
+      color: const Color(0xFFD8EFFF),
+      onTap: () {
+        Get.toNamed(AppRoutes.instituitionRoute);
+      },
     ),
     Menu(
       title: "Gestão de Administradores",
       subtitle: "subtitle",
       icon: AppIcons.userKey,
+      iconColor: const Color(0xFFD81B60),
+      color: const Color(0xFFFCE4EC),
+      onTap: () {},
     ),
     Menu(
       title: "Gestão de Papeis",
       subtitle: "subtitle",
       icon: AppIcons.userTrust,
+      iconColor: const Color(0xFFF9A825),
+      color: const Color(0xFFFFF4DB),
+      onTap: () {},
     ),
     Menu(
       title: "Gestão de Pacotes",
       subtitle: "subtitle",
       icon: AppIcons.walletArrow,
+      iconColor: const Color(0xFF7E57C2),
+      color: const Color(0xFFEDE7F6),
+      onTap: () {},
     ),
     Menu(
       title: "Broadcast & Notificações",
       subtitle: "subtitle",
       icon: AppIcons.commentAltDots,
+      iconColor: const Color(0xFFF57F17),
+      color: const Color(0xFFFDFDEA),
+      onTap: () {},
     ),
     Menu(
       title: "Estatística",
       subtitle: "subtitle",
       icon: AppIcons.chartSimpleHorizontal,
+      iconColor: const Color(0xFF2E7D32),
+      color: const Color(0xFFE7F8E7),
+      onTap: () {},
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,42 +164,47 @@ class _AdminPageState extends State<AdminPage> {
               itemCount: items.length,
               itemBuilder: (context, index) {
                 final menu = items.elementAt(index);
-                return Container(
-                  padding: const EdgeInsets.all(AppValues.s16),
-                  decoration: BoxDecoration(
-                    // color: Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(AppValues.s10),
-                    border: Border.all(
-                      width: AppValues.s1,
-                      color: AppColors.strokeColor,
+                return InkWell(
+                  onTap: menu.onTap,
+                  child: Container(
+                    padding: const EdgeInsets.all(AppValues.s16),
+                    decoration: BoxDecoration(
+                      color: menu.color.withOpacity(.7),
+                      borderRadius: BorderRadius.circular(AppValues.s10),
+                      // border: Border.all(
+                      //   width: AppValues.s1,
+                      //   color: AppColors.strokeColor,
+                      // ),
                     ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Center(
-                        child: SvgPicture.asset(
-                          menu.icon,
-                          width: AppValues.s28,
-                          color: AppColors.primaryColor,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: SvgPicture.asset(
+                            menu.icon,
+                            width: AppValues.s28,
+                            color: menu.iconColor,
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: AppValues.s10,
-                      ),
-                      Center(
-                        child: Text(
-                          menu.title,
-                          style:
-                              Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                    color: AppColors.secondColor,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                          textAlign: TextAlign.center,
+                        const SizedBox(
+                          height: AppValues.s10,
                         ),
-                      ),
-                    ],
+                        Center(
+                          child: Text(
+                            menu.title,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
+                                  color: menu.iconColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -192,10 +220,15 @@ class Menu {
   final String title;
   final String subtitle;
   final String icon;
+  final Color color;
+  final Color iconColor;
+  final VoidCallback? onTap;
 
-  Menu({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-  });
+  Menu(
+      {required this.title,
+      required this.subtitle,
+      required this.icon,
+      required this.color,
+      required this.iconColor,
+      required this.onTap});
 }

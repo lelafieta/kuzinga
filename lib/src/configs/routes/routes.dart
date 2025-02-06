@@ -17,4 +17,5 @@ class AppRoutes {
   static const String profileRoute = "/profile";
   static const String userOptionsRoute = "/userOptions";
   static const String adminRoute = "/admin";
+  static const String instituitionRoute = "/instituition";
 }
